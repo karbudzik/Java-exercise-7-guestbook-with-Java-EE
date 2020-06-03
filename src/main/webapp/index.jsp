@@ -13,6 +13,7 @@
     <title>90's Guest Book</title>
     <meta name="description" content="Java EE exercise">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -57,7 +58,7 @@
         %>
 
     <h2>It's your turn! Share your thoughts!</h2>
-    <form action="/example-url" method="post">
+    <form action="post_message" method="post">
         <ul>
             <li>
                 <label for="name">Name:</label>
@@ -79,54 +80,3 @@
 <!--<script src="js/scripts.js"></script>-->
 </body>
 </html>
-
-
-
-
-
-<%--<div class="sign-block">--%>
-<%--        <%--%>
-<%--        int styleChange = 1;--%>
-<%--        List<Sign> allSigns = ServiceSign.getAllSigns();--%>
-<%--        if(allSigns.size() == 0){--%>
-<%--            %>--%>
-<%--    <p>The book is empty</p>--%>
-<%--        <%--%>
-<%--        }--%>
-<%--        for(Sign oneSign :allSigns){--%>
-<%--            if(styleChange % 2 == 1){--%>
-<%--      %>--%>
-<%--    <div class="sign sign-even">--%>
-<%--        <%--%>
-<%--        }else{--%>
-<%--        %>--%>
-<%--        <div class="sign">--%>
-<%--            <%--%>
-<%--                }--%>
-<%--            %>--%>
-<%--            <div class="message"><%= oneSign.getMessage() %></div>--%>
-<%--            <div class="info">--%>
-<%--                <span>Name: </span>--%>
-<%--                <span class="name-content"><%= oneSign.getName() %></span>--%>
-<%--            </div>--%>
-<%--            <div class="info">--%>
-<%--                <span>Date: </span>--%>
-<%--                <span class="date-content"><%= oneSign.getDate() %> <%=oneSign.getTime()%></span>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--        <%--%>
-<%--                styleChange++;--%>
-<%--            }--%>
-<%--        %>--%>
-
-<%--    </div>--%>
-<%--    <form id="sign-to-guestbook" action="Servlet" method="POST">--%>
-<%--        <label>Message:</label>--%>
-<%--        <textarea name="provide-message"></textarea>--%>
-<%--        <label>Name:</label>--%>
-<%--        <input name="provide-name" type="text">--%>
-<%--        <button id="submit-btn">Submit</button>--%>
-<%--    </form>--%>
-
-<%--</body>--%>
-<%--</html>--%>

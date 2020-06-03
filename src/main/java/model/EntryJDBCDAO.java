@@ -2,10 +2,7 @@ package model;
 
 import connection.ConnectionCreator;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,5 +33,19 @@ public class EntryJDBCDAO implements EntryDAO {
             throw new RuntimeException(e.getMessage());
         }
         return entriesList;
+    }
+
+    @Override
+    public void insertNewEntry(Entry entry) {
+        try (Connection connection = getConnection()) {
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO entries (author_name, author_city, entry_content, entry_date) VALUES (?, ?, ?, ?);");
+            statement.setString(1, entry.getName());
+            statement.setString(2, entry.getCity());
+            statement.setString(3, entry.getContent());
+            statement.setDate(4, (Date) entry.getDate());
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
 }

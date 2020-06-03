@@ -9,7 +9,7 @@ import java.io.Reader;
 import java.sql.Connection;
 
 public class DatabaseLoader {
-    private String dbFilepath = "src/main/resources/questbook_sample_data.sql";
+    private String dbFilepath = "src/main/resources/guestbook_sample_data.sql";
 
     public void fillDatabase() {
         try {

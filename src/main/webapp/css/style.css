@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.entries {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    width: 100%;
+}
+
+.entry {
+    display: block;
+    background-color: lightgrey;
+    margin: 10px;
+    padding: 10px;
+}

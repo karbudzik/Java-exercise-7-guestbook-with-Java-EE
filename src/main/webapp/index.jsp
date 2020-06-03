@@ -12,12 +12,13 @@
     <meta charset="utf-8">
     <title>90's Guest Book</title>
     <meta name="description" content="Java EE exercise">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
     <h1>Guestbook</h1>
     <h2>How did others like our website?</h2>
-    <div class="entries">
+
         <%
             DatabaseLoader dbloader = new DatabaseLoader();
             dbloader.fillDatabase();
@@ -26,11 +27,16 @@
             if(allEntries.size() == 0){
         %>
 
-        <p class="book-empty-message">The guestbook is empty. Be the first to add your opinion.</p>
+    <p class="book-empty-message">The guestbook is empty. Be the first to add your opinion.</p>
 
         <%
             } else {
-                for (Entry entry : allEntries) {
+        %>
+
+    <div class="entries">
+
+        <%
+            for (Entry entry : allEntries) {
         %>
 
         <div class="entry">
@@ -41,10 +47,15 @@
         </div>
 
         <%
-            }}
+            }
         %>
 
     </div>
+
+        <%
+            }
+        %>
+
     <h2>It's your turn! Share your thoughts!</h2>
     <form action="/example-url" method="post">
         <ul>

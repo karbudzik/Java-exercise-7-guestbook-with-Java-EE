@@ -1,6 +1,6 @@
 package model;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 public class Entry {
 
@@ -8,9 +8,9 @@ public class Entry {
     private String name;
     private String city;
     private String content;
-    private LocalDate date;
+    private Date date;
 
-    public Entry(int ID, String name, String city, String content, LocalDate date) {
+    public Entry(int ID, String name, String city, String content, Date date) {
         this.ID = ID;
         this.name = name;
         this.city = city;
@@ -18,7 +18,7 @@ public class Entry {
         this.date = date;
     }
 
-    public Entry(String name, String city, String content, LocalDate date) {
+    public Entry(String name, String city, String content, Date date) {
         this.name = name;
         this.city = city;
         this.content = content;
@@ -41,7 +41,7 @@ public class Entry {
         return content;
     }
 
-    public LocalDate getDate() {
+    public Date getDate() {
         return date;
     }
 }

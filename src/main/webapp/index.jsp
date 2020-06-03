@@ -2,6 +2,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="model.EntryJDBCDAO" %>
 <%@ page import="model.EntryDAO" %>
+<%@ page import="connection.DatabaseLoader" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java"%>
 
 <!doctype html>
@@ -18,6 +19,8 @@
     <h2>How did others like our website?</h2>
     <div class="entries">
         <%
+            DatabaseLoader dbloader = new DatabaseLoader();
+            dbloader.fillDatabase();
             EntryDAO entryDao = new EntryJDBCDAO();
             List<Entry> allEntries = entryDao.getAllEntries();
             if(allEntries.size() == 0){

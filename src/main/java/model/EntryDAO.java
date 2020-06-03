@@ -7,3 +7,4 @@ public interface EntryDAO {
 }
 
 // dać Anonymous tam gdzie nie jest podane nic
+// sortowanie przy pobieraniu entriesów?

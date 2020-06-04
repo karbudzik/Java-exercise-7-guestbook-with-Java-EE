@@ -13,7 +13,7 @@
     <title>90's Guest Book</title>
     <meta name="description" content="Java EE exercise">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -43,6 +43,7 @@
         <div class="entry">
             <p class="name"><%= entry.getName() %></p>
             <p class="city"><%= entry.getCity() %></p>
+            <hr>
             <p class="content"><%= entry.getContent() %></p>
             <p class="date"><%= entry.getDate() %></p>
         </div>

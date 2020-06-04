@@ -1,6 +1,5 @@
 package servlets;
 
-
 import model.Entry;
 import model.EntryDAO;
 import model.EntryJDBCDAO;
@@ -26,16 +25,18 @@ public class EntryServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException {
-        java.sql.Date currentDate = new java.sql.Date(Calendar.getInstance().getTime().getTime());
+        handleNewEntryInsert(request);
+        doGet(request, response);
+    }
 
+    private void handleNewEntryInsert(HttpServletRequest request) {
+        java.sql.Date currentDate = new java.sql.Date(Calendar.getInstance().getTime().getTime());
         String user_name = request.getParameter("user_name");
         String user_city = request.getParameter("user_city");
         String user_message = request.getParameter("user_message");
 
         EntryDAO entryDao = new EntryJDBCDAO();
         Entry entry = new Entry(user_name, user_city, user_message, currentDate);
-
         entryDao.insertNewEntry(entry);
-        doGet(request, response);
     }
 }

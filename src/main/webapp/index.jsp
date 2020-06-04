@@ -58,7 +58,7 @@
         %>
 
     <h2>It's your turn! Share your thoughts!</h2>
-    <form action="post_message" method="post">
+    <form action="entries" method="post">
         <ul>
             <li>
                 <label for="name">Name:</label>

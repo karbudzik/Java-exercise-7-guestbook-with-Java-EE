@@ -5,18 +5,27 @@ import model.Entry;
 import model.EntryDAO;
 import model.EntryJDBCDAO;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.Calendar;
 
-@WebServlet("/post_message")
+@WebServlet("/entries")
 public class EntryServlet extends HttpServlet {
 
     @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("index.jsp");
+        requestDispatcher.forward(req, resp);
+    }
+
+    @Override
     protected void doPost(HttpServletRequest request,
-                          HttpServletResponse response) {
+                          HttpServletResponse response) throws ServletException, IOException {
         java.sql.Date currentDate = new java.sql.Date(Calendar.getInstance().getTime().getTime());
 
         String user_name = request.getParameter("user_name");
@@ -27,5 +36,6 @@ public class EntryServlet extends HttpServlet {
         Entry entry = new Entry(user_name, user_city, user_message, currentDate);
 
         entryDao.insertNewEntry(entry);
+        doGet(request, response);
     }
 }

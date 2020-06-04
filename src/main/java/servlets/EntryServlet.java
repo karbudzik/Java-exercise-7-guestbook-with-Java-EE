@@ -31,7 +31,8 @@ public class EntryServlet extends HttpServlet {
 
     private void handleNewEntryInsert(HttpServletRequest request) {
         java.sql.Date currentDate = new java.sql.Date(Calendar.getInstance().getTime().getTime());
-        String user_name = request.getParameter("user_name");
+        String user_name = (request.getParameter("user_name").length() == 0) ? "Anonymous" : request.getParameter("user_name");
+
         String user_city = request.getParameter("user_city");
         String user_message = request.getParameter("user_message");
 

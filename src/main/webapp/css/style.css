@@ -44,8 +44,8 @@ h2 {
 }
 
 .entry {
-    background-color: #F4EFED;
-    box-shadow: 0 0 10px 10px rgba(140,138,135,0.05);
+    background-color: #f7f4f3;
+    box-shadow: 0 0 10px 10px rgba(140,138,135,0.07);
     border-radius: 10px;
     margin: 15px;
     padding: 15px;
@@ -90,4 +90,43 @@ h2 {
     font-weight: 500;
     font-size: 13px;
     padding-bottom: 15px;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+input, textarea {
+    font: 1em sans-serif;
+    background-color: #f7f4f3;
+    border: 1px solid #bfbebe;
+    border-radius: 10px;
+    width: 450px;
+    padding: 10px;
+    margin: 3px;
+}
+
+button {
+    margin: 20px auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: #D91C0B;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #F2EFE9;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background-color: #e32d1d;
+    font-size: 19px;
+    cursor: pointer;
 }

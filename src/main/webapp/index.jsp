@@ -62,16 +62,13 @@
     <form action="entries" method="post">
         <ul>
             <li>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="user_name">
+                <input type="text" id="name" name="user_name" placeholder="Name">
             </li>
             <li>
-                <label for="city">City:</label>
-                <input type="text" id="city" name="user_city">
+                <input type="text" id="city" name="user_city" placeholder="City">
             </li>
             <li>
-                <label for="message">Message:</label>
-                <textarea id="message" name="user_message">Enter your message here</textarea>
+                <textarea id="message" name="user_message" placeholder="Your message"></textarea>
             </li>
             <li class="button">
                 <button type="submit">Send message</button>

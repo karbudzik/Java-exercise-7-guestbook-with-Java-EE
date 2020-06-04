@@ -25,10 +25,6 @@ public class Entry {
         this.date = date;
     }
 
-    public int getID() {
-        return ID;
-    }
-
     public String getName() {
         return name;
     }

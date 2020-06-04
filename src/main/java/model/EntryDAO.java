@@ -7,6 +7,3 @@ public interface EntryDAO {
 
     void insertNewEntry(Entry entry);
 }
-
-// dać Anonymous tam gdzie nie jest podane nic
-// sortowanie przy pobieraniu entriesów?

@@ -114,7 +114,7 @@ input, textarea {
 }
 
 button {
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 15px 30px;
     border: none;
     background-color: #D91C0B;
@@ -129,4 +129,10 @@ button:hover {
     background-color: #e32d1d;
     font-size: 19px;
     cursor: pointer;
+}
+
+.validation_message {
+    color: #D91C0B;
+    margin-top: 10px;
+    visibility: hidden;
 }

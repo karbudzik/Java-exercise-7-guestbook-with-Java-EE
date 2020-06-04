@@ -70,11 +70,14 @@
             <li>
                 <textarea id="message" name="user_message" placeholder="Your message"></textarea>
             </li>
-            <li class="button">
-                <button type="submit">Send message</button>
+            <li>
+                <p class="validation_message">You can't send an empty message!</p>
+            </li>
+            <li >
+                <button class="button" type="submit">Send message</button>
             </li>
         </ul>
     </form>
-<!--<script src="js/scripts.js"></script>-->
+<script src="js/scripts.js"></script>
 </body>
 </html>
